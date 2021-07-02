@@ -16,6 +16,13 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         setLogListeners()
+
+         val currentThread = Thread.currentThread()
+         currentThread.setUncaughtExceptionHandler{ _, throwable ->
+
+             val x = throwable.message
+             val cause = throwable.cause
+         }
     }
 
     private fun setLogListeners(){
