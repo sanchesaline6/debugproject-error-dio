@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">debugproject</string>
+    <string name="info_log">Info log</string>
+</resources>
