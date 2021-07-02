@@ -21,8 +21,13 @@ class MainActivity : AppCompatActivity() {
     private fun setLogListeners(){
         binding.debugBTN.setOnClickListener { Log.d("click", "Opa! cliquei no debug")}
         binding.errorBTN.setOnClickListener {
-            clicks++
-            Log.e("click", "Opa! cliquei no erro")
+            try{
+                val list = listOf(2,1,4)
+                val a = list[6]
+            }
+            catch (e: IndexOutOfBoundsException){
+                val x = 0
+            }
         }
 
         binding.infoBTN.setOnClickListener { Log.i("click", "Opa! cliquei no info")}
